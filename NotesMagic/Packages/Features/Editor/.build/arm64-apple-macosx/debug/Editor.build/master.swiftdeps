@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)"
+options: "28a97f96d247d518b8ac00b5ac592ce2"
+build_time: [1755378790, 951696000]
+inputs:
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/Sources/Editor/EditorView.swift": [1755370913, 512439235]

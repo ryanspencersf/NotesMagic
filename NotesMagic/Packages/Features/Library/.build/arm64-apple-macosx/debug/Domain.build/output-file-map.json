@@ -1,0 +1,41 @@
+{
+  "": {
+    "swift-dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/master.swiftdeps"
+  },
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/Annotation.swift": {
+    "dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/Annotation.d",
+    "object": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/Annotation.swift.o",
+    "swiftmodule": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/Annotation~partial.swiftmodule",
+    "swift-dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/Annotation.swiftdeps"
+  },
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/MockNotesStore.swift": {
+    "dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/MockNotesStore.d",
+    "object": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/MockNotesStore.swift.o",
+    "swiftmodule": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/MockNotesStore~partial.swiftmodule",
+    "swift-dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/MockNotesStore.swiftdeps"
+  },
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/Note.swift": {
+    "dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/Note.d",
+    "object": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/Note.swift.o",
+    "swiftmodule": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/Note~partial.swiftmodule",
+    "swift-dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/Note.swiftdeps"
+  },
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/NotesStore.swift": {
+    "dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/NotesStore.d",
+    "object": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/NotesStore.swift.o",
+    "swiftmodule": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/NotesStore~partial.swiftmodule",
+    "swift-dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/NotesStore.swiftdeps"
+  },
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/Relation.swift": {
+    "dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/Relation.d",
+    "object": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/Relation.swift.o",
+    "swiftmodule": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/Relation~partial.swiftmodule",
+    "swift-dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/Relation.swiftdeps"
+  },
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/TopicView.swift": {
+    "dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/TopicView.d",
+    "object": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/TopicView.swift.o",
+    "swiftmodule": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/TopicView~partial.swiftmodule",
+    "swift-dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/TopicView.swiftdeps"
+  }
+}

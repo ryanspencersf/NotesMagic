@@ -1,0 +1,85 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "Domain-debug.module": ["<Domain-debug.module>"]
+  "Editor-debug.module": ["<Editor-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "UIComponents-debug.module": ["<UIComponents-debug.module>"]
+  "main": ["<Editor-debug.module>"]
+  "test": ["<Editor-debug.module>"]
+default: "main"
+nodes:
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/Sources/Editor/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/Annotation.swift","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/MockNotesStore.swift","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/Note.swift","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/NotesStore.swift","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/Relation.swift","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/TopicView.swift"]
+    outputs: ["/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/sources"]
+    description: "Write auxiliary file /Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/sources"
+
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Editor.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/Sources/Editor/EditorView.swift"]
+    outputs: ["/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Editor.build/sources"]
+    description: "Write auxiliary file /Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Editor.build/sources"
+
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/UIComponents.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/UIComponents/Sources/UIComponents/AppearanceSettings.swift","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/UIComponents/Sources/UIComponents/DesignSystem.swift"]
+    outputs: ["/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/UIComponents.build/sources"]
+    description: "Write auxiliary file /Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/UIComponents.build/sources"
+
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<Domain-debug.module>":
+    tool: phony
+    inputs: ["/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/Annotation.swift.o","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/MockNotesStore.swift.o","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/Note.swift.o","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/NotesStore.swift.o","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/Relation.swift.o","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/TopicView.swift.o","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.swiftmodule"]
+    outputs: ["<Domain-debug.module>"]
+
+  "<Editor-debug.module>":
+    tool: phony
+    inputs: ["/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Editor.build/EditorView.swift.o","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Editor.swiftmodule"]
+    outputs: ["<Editor-debug.module>"]
+
+  "<UIComponents-debug.module>":
+    tool: phony
+    inputs: ["/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/UIComponents.build/AppearanceSettings.swift.o","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/UIComponents.build/DesignSystem.swift.o","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/UIComponents.swiftmodule"]
+    outputs: ["<UIComponents-debug.module>"]
+
+  "C.Domain-debug.module":
+    tool: shell
+    inputs: ["/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/Annotation.swift","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/MockNotesStore.swift","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/Note.swift","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/NotesStore.swift","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/Relation.swift","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/TopicView.swift","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/sources"]
+    outputs: ["/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/Annotation.swift.o","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/MockNotesStore.swift.o","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/Note.swift.o","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/NotesStore.swift.o","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/Relation.swift.o","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/TopicView.swift.o","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.swiftmodule"]
+    description: "Compiling Swift Module 'Domain' (6 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","Domain","-emit-dependencies","-emit-module","-emit-module-path","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.swiftmodule","-output-file-map","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/sources","-I","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug","-target","arm64-apple-macosx14.0","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.build/Domain-Swift.h","-color-diagnostics","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","domain"]
+
+  "C.Editor-debug.module":
+    tool: shell
+    inputs: ["/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/Sources/Editor/EditorView.swift","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Domain.swiftmodule","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/UIComponents.swiftmodule","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Editor.build/sources"]
+    outputs: ["/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Editor.build/EditorView.swift.o","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Editor.swiftmodule"]
+    description: "Compiling Swift Module 'Editor' (1 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","Editor","-emit-dependencies","-emit-module","-emit-module-path","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Editor.swiftmodule","-output-file-map","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Editor.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Editor.build/sources","-I","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug","-target","arm64-apple-macosx14.0","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Editor.build/Editor-Swift.h","-color-diagnostics","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","editor"]
+
+  "C.UIComponents-debug.module":
+    tool: shell
+    inputs: ["/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/UIComponents/Sources/UIComponents/AppearanceSettings.swift","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/UIComponents/Sources/UIComponents/DesignSystem.swift","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/UIComponents.build/sources"]
+    outputs: ["/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/UIComponents.build/AppearanceSettings.swift.o","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/UIComponents.build/DesignSystem.swift.o","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/UIComponents.swiftmodule"]
+    description: "Compiling Swift Module 'UIComponents' (2 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","UIComponents","-emit-dependencies","-emit-module","-emit-module-path","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/UIComponents.swiftmodule","-output-file-map","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/UIComponents.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/UIComponents.build/sources","-I","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug","-target","arm64-apple-macosx14.0","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/UIComponents.build/UIComponents-Swift.h","-color-diagnostics","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","uicomponents"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/Sources/Editor/","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/Package.swift","/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

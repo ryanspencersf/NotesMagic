@@ -1,0 +1,4 @@
+module Domain {
+    header "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Domain.build/Domain-Swift.h"
+    requires objc
+}

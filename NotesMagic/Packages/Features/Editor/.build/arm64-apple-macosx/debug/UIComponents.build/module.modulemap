@@ -1,0 +1,4 @@
+module UIComponents {
+    header "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/UIComponents.build/UIComponents-Swift.h"
+    requires objc
+}

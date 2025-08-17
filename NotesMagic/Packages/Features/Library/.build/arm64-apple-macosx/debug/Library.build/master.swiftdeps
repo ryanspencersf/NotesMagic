@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)"
+options: "20aaa9ec6bcf48b6b728584d31ccdbf7"
+build_time: [1755378754, 277916000]
+inputs:
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/Sources/Library/LibraryView.swift": [1755369390, 514318139]
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/Sources/Library/LibraryViewModel.swift": [1755369304, 161436930]

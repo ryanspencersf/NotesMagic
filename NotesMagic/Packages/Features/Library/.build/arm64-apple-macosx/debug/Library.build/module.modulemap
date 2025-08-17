@@ -1,0 +1,4 @@
+module Library {
+    header "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Library.build/Library-Swift.h"
+    requires objc
+}

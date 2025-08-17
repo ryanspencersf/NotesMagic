@@ -1,0 +1,10 @@
+version: "Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)"
+options: "17d6de1b1ee5b7fede5b6598003586af"
+build_time: [1755378758, 946299000]
+inputs:
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/Annotation.swift": [1755369114, 861769719]
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/MockNotesStore.swift": [1755369140, 994362398]
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/Note.swift": [1755369046, 852574218]
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/NotesStore.swift": [1755369063, 775020740]
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/Relation.swift": [1755369119, 679964157]
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain/Sources/Domain/TopicView.swift": [1755369127, 432548309]

@@ -1,0 +1,38 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "domain",
+          "kind" : "fileSystem",
+          "location" : "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain",
+          "name" : "Domain"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Domain"
+        },
+        "subpath" : "domain"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "uicomponents",
+          "kind" : "fileSystem",
+          "location" : "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/UIComponents",
+          "name" : "UIComponents"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/UIComponents"
+        },
+        "subpath" : "uicomponents"
+      }
+    ]
+  },
+  "version" : 6
+}

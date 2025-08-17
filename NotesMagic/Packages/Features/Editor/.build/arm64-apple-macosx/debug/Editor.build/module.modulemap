@@ -1,0 +1,4 @@
+module Editor {
+    header "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Editor.build/Editor-Swift.h"
+    requires objc
+}

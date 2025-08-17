@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/UIComponents.build/master.swiftdeps"
+  },
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/UIComponents/Sources/UIComponents/AppearanceSettings.swift": {
+    "dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/UIComponents.build/AppearanceSettings.d",
+    "object": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/UIComponents.build/AppearanceSettings.swift.o",
+    "swiftmodule": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/UIComponents.build/AppearanceSettings~partial.swiftmodule",
+    "swift-dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/UIComponents.build/AppearanceSettings.swiftdeps"
+  },
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/UIComponents/Sources/UIComponents/DesignSystem.swift": {
+    "dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/UIComponents.build/DesignSystem.d",
+    "object": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/UIComponents.build/DesignSystem.swift.o",
+    "swiftmodule": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/UIComponents.build/DesignSystem~partial.swiftmodule",
+    "swift-dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/UIComponents.build/DesignSystem.swiftdeps"
+  }
+}

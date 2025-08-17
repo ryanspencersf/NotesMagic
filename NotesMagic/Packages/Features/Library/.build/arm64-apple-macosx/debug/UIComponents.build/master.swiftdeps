@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)"
+options: "2fd80d81814275b89daf0ce7d15f2d7e"
+build_time: [1755378721, 493490000]
+inputs:
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/UIComponents/Sources/UIComponents/AppearanceSettings.swift": [1755369194, 298743115]
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/UIComponents/Sources/UIComponents/DesignSystem.swift": [1755369275, 830833624]

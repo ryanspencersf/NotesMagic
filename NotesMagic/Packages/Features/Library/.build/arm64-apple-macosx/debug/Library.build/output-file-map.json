@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Library.build/master.swiftdeps"
+  },
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/Sources/Library/LibraryView.swift": {
+    "dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Library.build/LibraryView.d",
+    "object": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Library.build/LibraryView.swift.o",
+    "swiftmodule": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Library.build/LibraryView~partial.swiftmodule",
+    "swift-dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Library.build/LibraryView.swiftdeps"
+  },
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/Sources/Library/LibraryViewModel.swift": {
+    "dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Library.build/LibraryViewModel.d",
+    "object": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Library.build/LibraryViewModel.swift.o",
+    "swiftmodule": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Library.build/LibraryViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Library/.build/arm64-apple-macosx/debug/Library.build/LibraryViewModel.swiftdeps"
+  }
+}

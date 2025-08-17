@@ -1,0 +1,36 @@
+# Project scope
+- App: NotesMagic (SwiftUI), platforms: iOS + macOS (multi‑platform target preferred over Catalyst; Catalyst allowed for quick runs).
+- Code lives in Swift Packages under /Packages; the App target(s) under /App depend on them.
+- Do NOT add files directly to the .xcodeproj; create files in packages or App folder.
+
+# Architecture
+- Packages: Domain, Data, Features/Editor, Features/Library, Features/Onboarding, UIComponents, MLKit.
+- Define protocols in Domain (NotesStore, SearchIndex, EmbeddingsIndex, SuggestionsEngine). Implement in Data.
+- Use GRDB for SQLite with FTS5; provide an in‑memory fallback if GRDB unavailable during bootstrapping.
+
+# Platforms
+- Minimum: iOS 17, macOS 14. Prefer SwiftUI everywhere.
+- Use `glassBackgroundEffect()` when available (iOS 18/macOS 15); otherwise `.ultraThinMaterial`.
+- macOS: implement commands (New Note, Command Palette, Paste as New Note) and multiple WindowGroups.
+
+# MVP features (must implement)
+- Editor with autosave + Context Bar pills (stub acceptable), Related panel (keyword‑based initially).
+- Soft delete (Trash) + Undo; background purge after 30 days.
+- Paste inline in Editor; **Paste as New Note** in Library (Cmd+V) using UIPasteboard/NSPasteboard.
+- Appearance settings: System/Light/Dark via @AppStorage + .preferredColorScheme.
+- Liquid‑Glass: ONLY the floating + button; everything else flat.
+
+# Implementation details
+- Add `deletedAt REAL` to notes table. Provide migration.
+- Provide `NotesStore` methods: create/update/trash/restore/purge/activeNotes/trashedNotes.
+- Add color tokens via Assets (Any/Dark): Background, TextSecondary, PillFill. Use tokens, not hex.
+- Provenance stored on every annotation; Accept/Undo flows for suggestions.
+
+# Quality
+- Compile after each step; fix build errors before moving on.
+- Add minimal unit tests (NotesStore soft delete + restore; appearance persistence).
+- Meet performance budgets: suggestion pill local <500ms; search <200ms @ 1k notes.
+
+# Style
+- Swift 5.10+, SwiftUI first. Avoid third‑party deps beyond GRDB unless explicitly approved.
+- Follow Apple HIG for spacing/typography; use the design tokens described in docs/SPEC.md.

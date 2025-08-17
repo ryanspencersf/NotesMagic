@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Editor.build/master.swiftdeps"
+  },
+  "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/Sources/Editor/EditorView.swift": {
+    "dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Editor.build/EditorView.d",
+    "object": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Editor.build/EditorView.swift.o",
+    "swiftmodule": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Editor.build/EditorView~partial.swiftmodule",
+    "swift-dependencies": "/Users/ryan/Documents/NotesMagic/NotesMagic/Packages/Features/Editor/.build/arm64-apple-macosx/debug/Editor.build/EditorView.swiftdeps"
+  }
+}
