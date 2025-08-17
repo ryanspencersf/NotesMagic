@@ -6,6 +6,7 @@ public struct StructurePanelView: View {
     @ObservedObject var vm: StructureVM
     let onPick: (String) -> Void
     let onClose: () -> Void
+    @State private var showSettings = false
     
     public init(vm: StructureVM, onPick: @escaping (String) -> Void, onClose: @escaping () -> Void) {
         self.vm = vm
@@ -20,10 +21,13 @@ public struct StructurePanelView: View {
                 Text("Structure")
                     .font(.title2.bold())
                 Spacer()
-                Button("Done") {
-                    onClose()
+                Button {
+                    showSettings = true
+                } label: {
+                    Image(systemName: "gearshape")
+                        .font(.title3)
                 }
-                .buttonStyle(.bordered)
+                .buttonStyle(.plain)
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 12)
@@ -87,6 +91,10 @@ public struct StructurePanelView: View {
             // Haptic feedback on appear
             let impact = UIImpactFeedbackGenerator(style: .soft)
             impact.impactOccurred()
+        }
+        .sheet(isPresented: $showSettings) {
+            SettingsView()
+                .presentationDetents([.medium, .large])
         }
     }
 }

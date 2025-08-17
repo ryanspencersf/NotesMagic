@@ -1,9 +1,12 @@
 import Foundation
+import Domain
 
-public class MockNotesStore: NotesStore {
+public class NotesStoreImpl: NotesStore {
+    public static let shared = NotesStoreImpl()
+    
     private var notes: [Note] = []
     
-    public init() {
+    private init() {
         // Add some sample notes for development
         _ = create("Welcome to NotesMagic! This is your first note. Start typing to capture your thoughts.")
         _ = create("Meeting notes from today's standup: Discussed new feature requirements, Set timeline for next sprint, Assigned tasks to team members")

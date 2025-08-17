@@ -10,9 +10,13 @@ import NaturalLanguage
 
 @main
 struct NotesMagicApp: App {
+    @StateObject var settings = SettingsStore.shared
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(settings)
+                .preferredColorScheme(settings.theme.colorScheme)
         }
     }
 }

@@ -34,4 +34,5 @@ public protocol TopicIndex {
     func addTag(_ tag: String, to noteID: UUID)
     func topicsWithScores() -> [(name: String, count: Int, lastUsedAt: Date, score: Double)]
     func relatedTopics(for topic: String, limit: Int) -> [String]
+    func reset()
 }

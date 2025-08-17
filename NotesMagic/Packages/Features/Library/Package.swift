@@ -14,12 +14,13 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../../Domain"),
+        .package(path: "../../Data"),
         .package(path: "../../UIComponents")
     ],
     targets: [
         .target(
             name: "Library",
-            dependencies: ["Domain", "UIComponents"]),
+            dependencies: ["Domain", "Data", "UIComponents"]),
         .testTarget(
             name: "LibraryTests",
             dependencies: ["Library"]),

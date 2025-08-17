@@ -10,6 +10,7 @@ public protocol NotesStore {
     func trashedNotes() -> [Note]
     func note(withId id: Note.ID) -> Note?
     func search(query: String) -> [Note]
+    func eraseAll()
 }
 
 public protocol AnnotationsStore {
