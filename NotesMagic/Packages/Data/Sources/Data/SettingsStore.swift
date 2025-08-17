@@ -1,43 +1,30 @@
 import SwiftUI
-import Combine
 
-/// App settings with simple UserDefaults persistence.
-final class SettingsStore: ObservableObject {
-    static let shared = SettingsStore()
+public final class SettingsStore: ObservableObject {
+  public static let shared = SettingsStore()
 
-    enum AppTheme: String, CaseIterable, Identifiable {
-        case system, light, dark
-        var id: String { rawValue }
-        var name: String { switch self {
-            case .system: "System"
-            case .light:  "Light"
-            case .dark:   "Dark"
-        }}
-        var colorScheme: ColorScheme? {
-            switch self { case .system: nil; case .light: .light; case .dark: .dark }
-        }
+  public enum Theme: String, CaseIterable, Identifiable {
+    case system, light, dark
+    public var id: String { rawValue }
+    public var colorScheme: ColorScheme? {
+      switch self { case .system: return nil; case .light: return .light; case .dark: return .dark }
     }
+  }
 
-    @Published var theme: AppTheme {
-        didSet { UserDefaults.standard.set(theme.rawValue, forKey: Keys.theme) }
-    }
-    @Published var autoApplyTags: Bool {
-        didSet { UserDefaults.standard.set(autoApplyTags, forKey: Keys.autoApplyTags) }
-    }
-    @Published var searchAnswerCard: Bool {
-        didSet { UserDefaults.standard.set(searchAnswerCard, forKey: Keys.searchAnswerCard) }
-    }
+  @Published public var theme: Theme = .system { didSet { persist() } }
+  @Published public var autoApplyTags: Bool = true { didSet { persist() } }
 
-    private init() {
-        let ud = UserDefaults.standard
-        theme = AppTheme(rawValue: ud.string(forKey: Keys.theme) ?? "") ?? .system
-        autoApplyTags = (ud.object(forKey: Keys.autoApplyTags) as? Bool) ?? true
-        searchAnswerCard = (ud.object(forKey: Keys.searchAnswerCard) as? Bool) ?? false
-    }
+  private init() { load() }
 
-    private enum Keys {
-        static let theme = "settings.theme"
-        static let autoApplyTags = "settings.autoApplyTags"
-        static let searchAnswerCard = "settings.searchAnswerCard"
-    }
+  private func persist() {
+    let d = UserDefaults.standard
+    d.set(theme.rawValue, forKey: "settings.theme")
+    d.set(autoApplyTags, forKey: "settings.autoApplyTags")
+  }
+
+  private func load() {
+    let d = UserDefaults.standard
+    if let raw = d.string(forKey: "settings.theme"), let t = Theme(rawValue: raw) { theme = t }
+    autoApplyTags = d.object(forKey: "settings.autoApplyTags") as? Bool ?? true
+  }
 }

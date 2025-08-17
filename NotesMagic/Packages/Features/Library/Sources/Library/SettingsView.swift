@@ -11,8 +11,8 @@ struct SettingsView: View {
             Form {
                 Section("Appearance") {
                     Picker("Theme", selection: $settings.theme) {
-                        ForEach(SettingsStore.AppTheme.allCases) { t in
-                            Text(t.name).tag(t)
+                        ForEach(SettingsStore.Theme.allCases) { t in
+                            Text(t.rawValue.capitalized).tag(t)
                         }
                     }
                 }
