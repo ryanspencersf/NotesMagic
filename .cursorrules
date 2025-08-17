@@ -1,36 +1,29 @@
-# Project scope
-- App: NotesMagic (SwiftUI), platforms: iOS + macOS (multi‑platform target preferred over Catalyst; Catalyst allowed for quick runs).
-- Code lives in Swift Packages under /Packages; the App target(s) under /App depend on them.
-- Do NOT add files directly to the .xcodeproj; create files in packages or App folder.
+# Cursor Rules for NotesMagic Development
 
-# Architecture
-- Packages: Domain, Data, Features/Editor, Features/Library, Features/Onboarding, UIComponents, MLKit.
-- Define protocols in Domain (NotesStore, SearchIndex, EmbeddingsIndex, SuggestionsEngine). Implement in Data.
-- Use GRDB for SQLite with FTS5; provide an in‑memory fallback if GRDB unavailable during bootstrapping.
+## Scope Limitation
+- ONLY modify the files specified in this PR
+- DO NOT touch any other files unless explicitly requested
+- Stay within the defined scope of the current task
 
-# Platforms
-- Minimum: iOS 17, macOS 14. Prefer SwiftUI everywhere.
-- Use `glassBackgroundEffect()` when available (iOS 18/macOS 15); otherwise `.ultraThinMaterial`.
-- macOS: implement commands (New Note, Command Palette, Paste as New Note) and multiple WindowGroups.
+## File Modification Rules
+- Make minimal, focused changes
+- Follow existing code patterns and architecture
+- Preserve the modular Swift Package structure
+- Maintain SwiftUI best practices
 
-# MVP features (must implement)
-- Editor with autosave + Context Bar pills (stub acceptable), Related panel (keyword‑based initially).
-- Soft delete (Trash) + Undo; background purge after 30 days.
-- Paste inline in Editor; **Paste as New Note** in Library (Cmd+V) using UIPasteboard/NSPasteboard.
-- Appearance settings: System/Light/Dark via @AppStorage + .preferredColorScheme.
-- Liquid‑Glass: ONLY the floating + button; everything else flat.
+## Architecture Constraints
+- Keep changes within the specified package boundaries
+- Follow the established protocol-based architecture
+- Maintain separation between Domain, Data, and Features layers
+- Preserve existing import statements and dependencies
 
-# Implementation details
-- Add `deletedAt REAL` to notes table. Provide migration.
-- Provide `NotesStore` methods: create/update/trash/restore/purge/activeNotes/trashedNotes.
-- Add color tokens via Assets (Any/Dark): Background, TextSecondary, PillFill. Use tokens, not hex.
-- Provenance stored on every annotation; Accept/Undo flows for suggestions.
+## Code Quality
+- Use Swift 5.10+ syntax
+- Follow Apple HIG for UI components
+- Maintain consistent naming conventions
+- Add appropriate documentation for new functionality
 
-# Quality
-- Compile after each step; fix build errors before moving on.
-- Add minimal unit tests (NotesStore soft delete + restore; appearance persistence).
-- Meet performance budgets: suggestion pill local <500ms; search <200ms @ 1k notes.
-
-# Style
-- Swift 5.10+, SwiftUI first. Avoid third‑party deps beyond GRDB unless explicitly approved.
-- Follow Apple HIG for spacing/typography; use the design tokens described in docs/SPEC.md.
+## Testing
+- Ensure changes compile without errors
+- Maintain existing functionality
+- Consider impact on other components
