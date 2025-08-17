@@ -13,10 +13,12 @@ public struct StructureDrawerView: View {
     }
     
     let applyFilter: (String) -> Void
+    let settings: SettingsStore
     
-    public init(viewModel: StructureViewModel, applyFilter: @escaping (String) -> Void) {
+    public init(viewModel: StructureViewModel, applyFilter: @escaping (String) -> Void, settings: SettingsStore) {
         self._viewModel = StateObject(wrappedValue: viewModel)
         self.applyFilter = applyFilter
+        self.settings = settings
     }
     
     public var body: some View {
@@ -102,5 +104,23 @@ private extension StructureViewModel.Section {
             case .ideas: return "Ideas"
             case .other: return "Other"
         }
+    }
+}
+
+#Preview {
+    StructureDrawerView(
+        viewModel: StructureViewModel(
+            index: MockTopicIndex()
+        ),
+        applyFilter: { _ in },
+        settings: MockSettingsStore()
+    )
+}
+
+// MARK: - Mock SettingsStore for Preview
+
+private class MockSettingsStore: SettingsStore {
+    override init() {
+        super.init()
     }
 }

@@ -1,8 +1,8 @@
 import SwiftUI
-import Data
+import Domain
 
 struct SettingsView: View {
-    @ObservedObject var settings = SettingsStore.shared
+    @ObservedObject var settings: SettingsStore
     @Environment(\.dismiss) private var dismiss
     @State private var showEraseConfirm = false
 

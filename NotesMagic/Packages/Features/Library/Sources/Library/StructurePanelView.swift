@@ -6,12 +6,14 @@ public struct StructurePanelView: View {
     @ObservedObject var vm: StructureViewModel
     let onPick: (String) -> Void
     let onClose: () -> Void
+    let settings: SettingsStore
     @State private var showSettings = false
     
-    public init(vm: StructureViewModel, onPick: @escaping (String) -> Void, onClose: @escaping () -> Void) {
+    public init(vm: StructureViewModel, onPick: @escaping (String) -> Void, onClose: @escaping () -> Void, settings: SettingsStore) {
         self.vm = vm
         self.onPick = onPick
         self.onClose = onClose
+        self.settings = settings
     }
     
     public var body: some View {
@@ -67,7 +69,7 @@ public struct StructurePanelView: View {
             }
         }
         .sheet(isPresented: $showSettings) {
-            SettingsView()
+            SettingsView(settings: settings)
                 .presentationDetents([.medium, .large])
         }
     }
