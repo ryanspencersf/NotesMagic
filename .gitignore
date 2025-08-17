@@ -118,7 +118,6 @@ Temporary Items
 
 # Swift Package Manager
 .build/
-Packages/
 Package.pins
 Package.resolved
 *.xcodeproj
